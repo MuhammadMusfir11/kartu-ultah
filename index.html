@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Selamat Ulang Tahun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script
+        type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="lock">
+    <div id="bar"></div>
+    <div id="game">
+        <p>Tarik panah ke bawah, lalu lepas &middot; balon pecah <b id="cnt">0</b> / <b id="tot">0</b></p>
+    </div>
+    <canvas id="g3"></canvas><canvas id="fx"></canvas>
+    <main id="main">
+        <section class="hero" id="hero">
+            <div class="eyebrow">Hari ini khusus untukmu</div>
+            <div class="arcwrap"><svg class="arc" viewBox="0 0 800 330" aria-label="Selamat Ulang Tahun">
+                    <path id="arcp" d="M60 300 A420 420 0 0 1 740 300" fill="none" />
+                    <text>
+                        <textPath href="#arcp" startOffset="50%" text-anchor="middle">Selamat <tspan class="hl">Ulang
+                                Tahun</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="age" id="age"></div>
+            </div>
+            <h2 class="wish-line">Selamat ya, <em id="nm"></em>!</h2>
+            <div class="sc">Gulir ke bawah</div>
+        </section>
+        <section id="momen">
+            <header class="sh fade"><span class="lbl"> &mdash; Momen</span>
+                <h2>Kenangan yang kita <em>gantung</em></h2>
+                <p>Potongan waktu yang dijepit rapi di tali, satu per satu.</p>
+            </header>
+            <div id="lines"></div>
+        </section>
+        <section id="ucapan">
+            <header class="sh fade"><span class="lbl"> &mdash; Ucapan</span>
+                <h2>Dari mereka yang <em>sayang</em> kamu</h2>
+            </header>
+            <div id="notes"></div>
+        </section>
+        <section class="giftwrap">
+            <header class="sh fade"><span class="lbl"> &mdash; Kejutan</span>
+                <h2>Satu hal <em>lagi</em></h2>
+                <p>Ketuk kadonya sampai terbuka.</p>
+            </header>
+            <canvas id="gcv"></canvas>
+            <div class="dots" id="dots"></div>
+            <p class="hint" id="hint">Ketuk 5 kali</p>
+            <div class="reveal-photo" id="rp"></div>
+        </section>
+        <div class="sign" id="sign"></div>
+    </main>
+    <script type="module" src="/static/main.js"></script>
+</body>
+
+</html>
